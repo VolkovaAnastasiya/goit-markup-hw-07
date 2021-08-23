@@ -1,0 +1,47 @@
+.auth-nav.list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.auth-nav_link {
+  display: flex;
+  align-items: center;
+  color: var(--primari-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.auth-nav_item:not(:last-child) {
+  margin-right: 50px;
+}
+.auth-nav_item {
+  display: flex;
+}
+
+.auth-nav_link:hover,
+.auth-nav_link:focus {
+  color: var(--accent-color);
+}
+.auth-nav_icon--mail {
+  margin-right: 10px;
+  fill: currentColor;
+  padding: 0;
+}
+
+.auth-nav_icon--tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+  padding: 0;
+}
