@@ -1,0 +1,13 @@
+.filter {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+
+  &_item {
+    border-radius: 4px;
+  }
+
+  &_item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
