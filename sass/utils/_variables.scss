@@ -1,16 +1,15 @@
-:root {
-  --primari-text-color: #757575;
-  --title-text-color: #212121;
-  --accent-color: #2196f3;
-  --primari-white-color: #ffffff;
-  --logo-nav-color: #000000;
-  --button-background-color: #f5f4fa;
-  --hero-background-color: #2f303a;
-  --hero-button-focus-color: #188ce8;
-  --border-cards-color: #eeeeee;
-  --auth-nav-footer-color: rgba(255, 255, 255, 0.6);
-  --fill-icon-color: #afb1b8;
-}
+$primari-text-color: #757575;
+$title-text-color: #212121;
+$accent-color: #2196f3;
+$primari-white-color: #ffffff;
+$logo-nav-color: #000000;
+$button-background-color: #f5f4fa;
+$hero-background-color: #2f303a;
+$hero-button-focus-color: #188ce8;
+$border-cards-color: #eeeeee;
+$auth-nav-footer-color: rgba(255, 255, 255, 0.6);
+$fill-icon-color: #afb1b8;
+$header-blok: #ececec;
 
 html {
   box-sizing: border-box;
@@ -26,8 +25,8 @@ body {
   margin: 0;
   /* width: 1600px; */
 
-  background: var(--primari-white-color);
-  color: var(--primari-text-color);
+  background: $primari-white-color;
+  color: $primari-text-color;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
 }

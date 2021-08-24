@@ -1,7 +1,7 @@
 .projects-border {
-  border-bottom: 1px solid var(--border-cards-color);
-  border-left: 1px solid var(--border-cards-color);
-  border-right: 1px solid var(--border-cards-color);
+  border-bottom: 1px solid $border-cards-color;
+  border-left: 1px solid $border-cards-color;
+  border-right: 1px solid $border-cards-color;
   padding: 20px 24px;
 }
 
@@ -30,12 +30,11 @@
 
 .projects-link {
   display: block;
-  color: var(--primari-text-color);
+  color: $primari-text-color;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .img-thumb {
   position: relative;
   overflow: hidden;
@@ -52,7 +51,7 @@
   line-height: 1.6;
   padding: 63px 24px;
   background: rgba(33, 150, 243, 0.9);
-  color: var(--primari-white-color);
+  color: $primari-white-color;
 
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -66,7 +65,7 @@
 .projects-title {
   margin-bottom: 4px;
 
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;

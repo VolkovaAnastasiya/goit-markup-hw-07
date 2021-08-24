@@ -1,17 +1,17 @@
 .logo {
   margin-right: 93px;
 
-  color: var(--logo-nav-color);
+  color: $logo-nav-color;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
 
-.logo_web {
-  color: var(--accent-color);
+.logo-web {
+  color: $accent-color;
 }
 
-.logo_studio {
-  color: var(--primari-white-color);
+.logo-studio {
+  color: $primari-white-color;
 }

@@ -1,18 +1,21 @@
-@import "./components/modal";
-@import "./components/page-header";
+@import "./utils/variables";
+@import "./base/normalize";
 
-@import "./components/hero";
-@import "./components/feature";
-@import "./components/filter";
-@import "./components/work";
-@import "./components/team";
-@import "./components/footer";
-@import "./components/partners";
-@import "./components/section";
-@import "./components/button";
+@import "./components/page-header";
+@import "./components/logo";
 @import "./components/auth-nav";
 @import "./components/nav";
+@import "./components/hero";
+@import "./components/feature";
+
+@import "./components/button";
+@import "./components/work";
+@import "./components/team";
+
+@import "./components/partners";
+@import "./components/section";
+
 @import "./components/projects";
-@import "./utils/variables";
-@import "./components/logo";
-@import "./base/normalize";
+
+@import "./components/modal";
+@import "./components/footer";

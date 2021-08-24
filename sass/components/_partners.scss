@@ -1,5 +1,3 @@
-/*  section logo */
-
 .logo-list {
   display: flex;
 }
@@ -25,12 +23,12 @@
 }
 .partners:focus,
 .partners:hover {
-  border-color: var(--accent-color);
+  border-color: $accent-color;
 }
 
 a.partners:focus .icon-logo,
 a.partners:hover .icon-logo {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
 
 .icon-logo {
@@ -42,5 +40,5 @@ a.partners:hover .icon-logo {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  fill: var(--fill-icon-color);
+  fill: $fill-icon-color;
 }

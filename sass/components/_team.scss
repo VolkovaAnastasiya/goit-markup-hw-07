@@ -1,6 +1,6 @@
 /* team */
 .team {
-  background-color: var(--button-background-color);
+  background-color: $button-background-color;
 }
 
 .team-cards {
@@ -23,7 +23,7 @@
 .title-el {
   margin-bottom: 10px;
 
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -47,7 +47,6 @@
   margin: 0px;
 }
 
-.footer_link,
 .list-link > .link {
   display: flex;
   width: 44px;
@@ -61,13 +60,13 @@
 }
 .list-link > .link:hover,
 .list-link > .link:focus {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
 }
 .icon-link {
   width: 20px;
   height: 20px;
 
-  fill: var(--fill-icon-color);
+  fill: $fill-icon-color;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -75,7 +74,7 @@
 
 a.link:hover .icon-link,
 a.link:focus .icon-link {
-  fill: var(--primari-white-color);
+  fill: $primari-white-color;
 }
 
 .team-border {
