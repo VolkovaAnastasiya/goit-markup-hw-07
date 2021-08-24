@@ -1,4 +1,13 @@
 /* модалка */
+b {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: $title-text-color;
+  margin-bottom: 12px;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -9,67 +18,59 @@
   z-index: 9;
 
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity $transition;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
-}
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   min-width: 528px;
   min-height: 581px;
-
   background: $primari-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-}
-.modal-close {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  cursor: pointer;
 
-  width: 30px;
-  height: 30px;
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
 
-  background: $primari-white-color;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  border-radius: 50%;
-}
-.modal-close > .button-icon {
-  width: 11px;
-  height: 11px;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-close:hover .button-icon,
-.modal-close:focus .button-icon {
-  fill: $accent-color;
+  &_close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: $primari-white-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
 }
 
-b {
-  display: inline-block;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  color: $title-text-color;
-  margin-bottom: 12px;
+.button-icon {
+  .modal_close > & {
+    width: 11px;
+    height: 11px;
+    transition-property: fill;
+    transition-duration: $transition;
+  }
+
+  .modal-close:hover &,
+  .modal-close:focus & {
+    fill: $accent-color;
+  }
 }
+
 .form {
   padding: 40px;
 }
@@ -85,7 +86,7 @@ b {
   position: relative;
 }
 .form-label,
-.form-comment label {
+.comment-label {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
@@ -126,16 +127,16 @@ b {
 
   display: inline-block;
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: $transition;
 
   fill: $title-text-color;
 }
 
-.form-comment {
+.comment {
   margin-bottom: 20px;
 }
-.form-comment textarea {
+
+.comment-textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -146,17 +147,18 @@ b {
   outline: none;
   caret-color: $title-text-color;
   cursor: pointer;
-}
-.form-comment textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
 
-.form-comment textarea:hover {
-  border: 1px solid $accent-color;
-}
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
 
-textarea:focus {
-  color: $title-text-color;
+  &:hover {
+    border: 1px solid $accent-color;
+  }
+
+  &:focus {
+    color: $title-text-color;
+  }
 }
 
 .policy {
@@ -184,18 +186,17 @@ textarea:focus {
   cursor: pointer;
 
   transition-property: border, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  transition-duration: $transition;
 
-.checkbox:focus + .icon-checkbox {
-  border-color: $accent-color;
-}
+  .checkbox:focus + & {
+    border-color: $accent-color;
+  }
 
-.checkbox:checked + .icon-checkbox {
-  background-color: $accent-color;
+  .checkbox:checked + & {
+    background-color: $accent-color;
 
-  border: 2px solid $accent-color;
+    border: 2px solid $accent-color;
+  }
 }
 
 .checkbox {
@@ -207,13 +208,14 @@ textarea:focus {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+
+  &_link {
+    color: $accent-color;
+    text-decoration: underline;
+    margin-left: 2px;
+  }
 }
 
-.checkbox-link {
-  color: $accent-color;
-  text-decoration: underline;
-  margin-left: 2px;
-}
 .form-button {
   height: 50px;
   padding: 10px 55px;
@@ -230,14 +232,14 @@ textarea:focus {
   background-color: $accent-color;
   border: inherit;
   transition-property: background-color, box-shadow, border-radius, border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form-button:focus,
-.form-button:hover {
-  background-color: $hero-button-focus-color;
-  cursor: pointer;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-color: inherit;
+  transition-duration: $transition;
+
+  &:focus,
+  &:hover {
+    background-color: $hero-button-focus-color;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: inherit;
+  }
 }

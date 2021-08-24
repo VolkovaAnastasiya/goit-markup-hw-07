@@ -341,10 +341,10 @@ summary {
   transition-property: color, background-color, -webkit-box-shadow;
   transition-property: color, background-color, box-shadow;
   transition-property: color, background-color, box-shadow, -webkit-box-shadow;
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover, .button:focus {
@@ -1013,6 +1013,15 @@ a.partners:hover .icon-logo {
 }
 
 /* модалка */
+b {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -1022,18 +1031,13 @@ a.partners:hover .icon-logo {
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 9;
   opacity: 1;
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-  -webkit-transform: translate(-50%, -50%) scale(0.9);
-          transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal {
@@ -1054,7 +1058,12 @@ a.partners:hover .icon-logo {
   border-radius: 4px;
 }
 
-.modal-close {
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal_close {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -1068,29 +1077,18 @@ a.partners:hover .icon-logo {
   border-radius: 50%;
 }
 
-.modal-close > .button-icon {
+.modal_close > .button-icon {
   width: 11px;
   height: 11px;
   -webkit-transition-property: fill;
   transition-property: fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover .button-icon,
 .modal-close:focus .button-icon {
   fill: #2196f3;
-}
-
-b {
-  display: inline-block;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  color: #212121;
-  margin-bottom: 12px;
 }
 
 .form {
@@ -1116,7 +1114,7 @@ b {
 }
 
 .form-label,
-.form-comment label {
+.comment-label {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
@@ -1159,18 +1157,16 @@ b {
   display: inline-block;
   -webkit-transition-property: fill;
   transition-property: fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: #212121;
 }
 
-.form-comment {
+.comment {
   margin-bottom: 20px;
 }
 
-.form-comment textarea {
+.comment-textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -1183,27 +1179,27 @@ b {
   cursor: pointer;
 }
 
-.form-comment textarea::-webkit-input-placeholder {
+.comment-textarea::-webkit-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-comment textarea:-ms-input-placeholder {
+.comment-textarea:-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-comment textarea::-ms-input-placeholder {
+.comment-textarea::-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-comment textarea::placeholder {
+.comment-textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-comment textarea:hover {
+.comment-textarea:hover {
   border: 1px solid #2196f3;
 }
 
-textarea:focus {
+.comment-textarea:focus {
   color: #212121;
 }
 
@@ -1243,10 +1239,8 @@ textarea:focus {
   cursor: pointer;
   -webkit-transition-property: border, background-color;
   transition-property: border, background-color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:focus + .icon-checkbox {
@@ -1269,7 +1263,7 @@ textarea:focus {
   overflow: hidden;
 }
 
-.checkbox-link {
+.checkbox_link {
   color: #2196f3;
   text-decoration: underline;
   margin-left: 2px;
@@ -1292,14 +1286,11 @@ textarea:focus {
   transition-property: background-color, border-radius, border-color, -webkit-box-shadow;
   transition-property: background-color, box-shadow, border-radius, border-color;
   transition-property: background-color, box-shadow, border-radius, border-color, -webkit-box-shadow;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-button:focus,
-.form-button:hover {
+.form-button:focus, .form-button:hover {
   background-color: #188ce8;
   cursor: pointer;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

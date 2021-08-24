@@ -12,7 +12,8 @@
   border-radius: 4px;
   padding: 6px 22px;
   transition-property: color, background-color, box-shadow;
-  transition: $transition;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
