@@ -2,11 +2,13 @@
 
 .feature-list {
   display: flex;
+  margin: -15px;
 }
 
 .feature-box {
-  flex-basis: calc((100%-90px) / 4);
-  margin-right: 30px;
+  // flex-basis: calc((100%-90px) / 4);
+  // margin-right: 30px;
+  margin: 15px;
 }
 
 .feature-box:last-child {
