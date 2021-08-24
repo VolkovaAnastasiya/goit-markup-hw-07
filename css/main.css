@@ -354,7 +354,7 @@ summary {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.button-hidden {
+.hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,7 +370,7 @@ summary {
   border-radius: 4px;
 }
 
-.button-hidden--icon {
+.hidden--icon {
   width: 70px;
   height: 70px;
 }
@@ -602,22 +602,22 @@ summary {
 }
 
 /* section */
-.feature-list {
+.feature {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: -15px;
 }
 
-.feature-box {
+.feature_box {
   margin: 15px;
 }
 
-.feature-box:last-child {
+.feature_box:last-child {
   margin-right: 0px;
 }
 
-.button-hidden {
+.feature_button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -634,22 +634,22 @@ summary {
   background-color: #f5f4fa;
 }
 
-.feature-text {
+.feature_button--icon {
+  width: 70px;
+  height: 70px;
+}
+
+.feature_text {
   font-size: 14px;
   line-height: 1.7;
 }
 
-.feature-title {
+.feature_title {
   margin-bottom: 10px;
   color: #212121;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.14;
-}
-
-.button-hidden--icon {
-  width: 70px;
-  height: 70px;
 }
 
 .filter {
