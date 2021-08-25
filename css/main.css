@@ -1325,7 +1325,7 @@ policy_checkbox:focus + .policy_check {
   border-radius: 4px;
 }
 
-.backdrop.is-hidden .modal {
+.modal .backdrop.is-hidden {
   -webkit-transform: translate(-50%, -50%) scale(0.9);
           transform: translate(-50%, -50%) scale(0.9);
 }
