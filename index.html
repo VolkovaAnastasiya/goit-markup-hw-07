@@ -15,35 +15,35 @@
 
 <body>
    
-    <header class="header-blok">
-      <div class="header container">
-            <nav class="main-nav">
+    <header class="header">
+      <div class="header-container container">
+            <nav class="nav">
                 <a class="logo" href="/">
-                    <span class="logo-web">Web</span>Studio
+                    <span class="logo_web">Web</span>Studio
                 </a>
-                <ul class="site-nav">
-                    <li class="site-nav-item"><div class="link-current"><a href="index.html" class="site-nav-link link current">Студия</a></div></li>
-                    <li class="site-nav-item"><a href="portfolio.html" class="site-nav-link link">Портфолио</a></li>
-                    <li class="site-nav-item"><a href="" class="site-nav-link link">Контакты</a></li>
+                <ul class="nav_site">
+                    <li class="nav_item"><div class="nav_current"><a href="index.html" class="nav_link link current">Студия</a></div></li>
+                    <li class="nav_item"><a href="portfolio.html" class="nav_link link">Портфолио</a></li>
+                    <li class="nav_item"><a href="" class="nav_link link">Контакты</a></li>
                 </ul>
             </nav>
             
-            <ul class="auth-nav list">
-                <li class="auth-nav-item">
-                    <a href="mailto:info@devstudio.com" class="auth-nav-link" aria-label="почта">
-                        <svg class="auth-nav-icon-mail" width="16" height="12">
-                            <use href="./image/icons.svg#icon-envelope" class="icon-mail"></use>
-                        </svg>info@devstudio.com
-                    </a>
-                </li>
-                <li class="auth-nav-item">
-                    <a href="tel:+380961111111" class="auth-nav-link" aria-label="телефон">
-                        <svg class="auth-nav-icon-tel">
-                            <use href="./image/icons.svg#icon-Vector-1-1"></use>
-                        </svg>+38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
+        <ul class="auth ">
+            <li class="auth-item">
+                <a href="mailto:info@devstudio.com" class="auth-link " aria-label="почта">
+                    <svg class="auth_icon" width="16" height="12">
+                        <use href="./image/icons.svg#icon-envelope" class="icon-mail"></use>
+                    </svg>info@devstudio.com
+                </a>
+            </li>
+            <li class="auth-item">
+                <a href="tel:+380961111111" class="auth-link" aria-label="телефон">
+                    <svg class="auth_icon" width="10" height="16">
+                        <use href="./image/icons.svg#icon-Vector-1-1"></use>
+                    </svg>+38 096 111 11 11
+                </a>
+            </li>
+        </ul>
       </div>
 
     </header>
@@ -52,9 +52,9 @@
         <!--Герой-->
 
         <section class="hero">
-            <div class="container">
-                <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
+            <div class="container hero_container">
+                <h1 class="hero_title">Эффективные решения для вашего бизнеса</h1>
+                <button class="hero_button" type="button" data-modal-open>Заказать услугу</button>
                 <div class="backdrop is-hidden" data-modal>
                     <div class="modal">
         
@@ -65,53 +65,53 @@
                         </button>
         
                         <form class="form js-speaker-form">
-                            <b>Оставьте свои данные, мы вам перезвоним</b>
+                            <b class="form_text">Оставьте свои данные, мы вам перезвоним</b>
         
-                            <div class="form-field" role="group">
+                            <div class="form_field" role="group">
         
-                                <label class="form-label" for="name">Имя</label>
-                                <input class="form-input" type="text" name="name" id="name" placeholder=" ">
-                                <svg class="icon-form">
+                                <label class="form_label" for="name">Имя</label>
+                                <input class="form_input" type="text" name="name" id="name" placeholder=" ">
+                                <svg class="form_icon">
                                     <use href="./image/icons.svg#icon-person"></use>
                                 </svg>
                             </div>
         
-                            <div class="form-field" role="group">
-                                <label class="form-label" for="tel">Телефон</label>
-                                <input class="form-input" type="tel" name="tel" id="tel" placeholder=" ">
-                                <svg class="icon-form" width="18" height="18">
+                            <div class="form_field" role="group">
+                                <label class="form_label" for="tel">Телефон</label>
+                                <input class="form_input" type="tel" name="tel" id="tel" placeholder=" ">
+                                <svg class="form_icon" width="18" height="18">
                                     <use href="./image/icons.svg#icon-phone"></use>
                                 </svg>
                             </div>
         
-                            <div class="form-field" role="group">
-                                <label class="form-label" for="mail">Почта</label>
-                                <input class="form-input" type="email" name="mail" id="mail" placeholder=" ">
-                                <svg class="icon-form">
+                            <div class="form_field" role="group">
+                                <label class="form_label" for="mail">Почта</label>
+                                <input class="form_input" type="email" name="mail" id="mail" placeholder=" ">
+                                <svg class="form_icon">
                                     <use href="./image/icons.svg#icon-email"></use>
                                 </svg>
                             </div>
         
-                            <div class="form-comment comment" role="group">
-                                <label class="comment-label" for="comment">Коментарий</label>
-                                <textarea class="comment-textarea" name="comment" id="comment" rows="15" placeholder="Введите текст"></textarea>
+                            <div class="form_comment comment" role="group">
+                                <label class="comment_label" for="comment">Коментарий</label>
+                                <textarea class="comment_textarea" name="comment" id="comment" rows="15" placeholder="Введите текст"></textarea>
                             </div>
         
                             <div class="form-checkbox" role="group">
         
         
                                 <label class="policy" for="policy">
-                                    <input class="checkbox" type="checkbox" id="policy" name="policy">
-                                    <span class="icon-checkbox">
-                                        <svg class="icon-check" id="policy width=" 16px" height="15px">
-                                            <use href="./image/icons.svg#icon-check"></use>
+                                    <input class="policy_checkbox" type="checkbox" id="policy" name="policy">
+                                    <span class="policy_check">
+                                        <svg class="policy_icon" id="policy" width=" 16px" height="15px">
+                                            <use href="./image/icons.svg#policy_icon"></use>
                                         </svg>
                                     </span>
-                                    Соглашаюсь на рассылку и принимаю <a class="checkbox-link" href=""> Условия договора</a>
+                                    Соглашаюсь на рассылку и принимаю <a class="policy_link" href=""> Условия договора</a>
                                 </label>
         
         
-                                <button class="form-button" type="submit">Отправить</button>
+                                <button class="form_button" type="submit">Отправить</button>
         
                         </form>
                     </div>
@@ -362,44 +362,44 @@
         <section class="section">
             <div class="container">
                 <h2 class="section_title">Постоянные клиенты</h2>
-                    <ul class="logo-list">
-                        <li class="logo-card">
-                            <a href="" class="partners" aria-label=" "  >
-                                <svg class="icon-logo" width="106px" height="60px">
+                    <ul class="partners">
+                        <li class="partners_card">
+                            <a href="" class="partners_link" aria-label=" "  >
+                                <svg class="icon-logo" width="106" height="60">
                                     <use href="./image/icons.svg#icon-group-1"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="logo-card">
-                            <a href="" class="partners" aria-label="">
-                                <svg class="icon-logo" width="106px" height="60px">
+                        <li class="partners_card">
+                            <a href="" class="partners_link" aria-label="">
+                                <svg class="icon-logo" width="106" height="60">
                                     <use href="./image/icons.svg#icon-group-2"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="logo-card">
-                            <a href="" class="partners" aria-label="">
-                                <svg class="icon-logo" width="106px" height="60px">
+                        <li class="partners_card">
+                            <a href="" class="partners_link" aria-label="">
+                                <svg class="icon-logo" width="106" height="60">
                                     <use href="./image/icons.svg#icon-group-3"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="logo-card">
-                            <a href="" class="partners" aria-label="">
-                                <svg class="icon-logo" width="106px" height="60px">
+                        <li class="partners_card">
+                            <a href="" class="partners_link" aria-label="">
+                                <svg class="icon-logo" width="106" height="60">
                                     <use href="./image/icons.svg#icon-group-4"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="logo-card">
-                            <a href="" class="partners" aria-label="">
-                                <svg class="icon-logo" width="106px" height="60px">
+                        <li class="partners_card">
+                            <a href="" class="partners_link" aria-label="">
+                                <svg class="icon-logo" width="106" height="60">
                                     <use href="./image/icons.svg#icon-group5"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="logo-card">
-                            <a href="" class="partners" aria-label="">
+                        <li class="partners_card">
+                            <a href="" class="partners_link" aria-label="">
                                 <svg class="icon-logo" width="106px" height="60px">
                                     <use href="./image/icons.svg#icon-group-6"></use>
                                 </svg>
@@ -413,17 +413,20 @@
         <footer class="footer-blok ">
             <div class=" footer container">
                 <div class="footer-adress ">
-                    <a class="footer-logo logo" href="/"> <span class="logo-web">Web</span><span class="logo-studio">Studio</span></a>
+                    <a class="footer-logo logo" href="/"> <span class="logo_web">Web</span><span
+                            class="logo_studio">Studio</span></a>
                     <address class="address-footer">
                         <ul class="footer-item">
                             <li class="address">г. Киев, пр-т Леси Украинки, 26</li>
-                            <li class="address-nav"><a href="mailto:info@devstudio.com" class="auth-nav-footer">info@example.com</a></li>
-                            <li class="address-nav"><a href="tel:+380991111111" class="tel-nav-footer">+38 099 111 11 11</a></li>
+                            <li class="address-nav"><a href="mailto:info@devstudio.com"
+                                    class="auth-nav-footer">info@example.com</a></li>
+                            <li class="address-nav"><a href="tel:+380991111111" class="tel-nav-footer">+38 099 111 11 11</a>
+                            </li>
                         </ul>
                     </address>
                 </div>
-
-               <div class="botton-link ">
+        
+                <div class="botton-link ">
                     <p class="link-title">ПРИСОЕДИНЯЙТЕСЬ</p>
                     <ul class="footer-box">
                         <li class="footer-list">
@@ -455,9 +458,9 @@
                             </a>
                         </li>
                     </ul>
-               </div>
-               <label class="footer-mail" name="footer-mail" >
-                   <span class="footer-label">ПОДПИШИТЕСЬ НА РАССЫЛКУ</span>
+                </div>
+                <label class="footer-mail" name="footer-mail">
+                    <span class="footer-label">ПОДПИШИТЕСЬ НА РАССЫЛКУ</span>
                     <form class="mail-box">
                         <input class="footer-input" type="email" placeholder="E-mail">
                         <button class="footer-submit" type="submit">Подписаться
@@ -466,11 +469,11 @@
                             </svg>
                         </button>
                     </form>
-                    
-                    
-               </label>
-
-
+        
+        
+                </label>
+        
+        
             </div>
         </footer>
 

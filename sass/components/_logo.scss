@@ -6,12 +6,12 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-}
 
-.logo-web {
-  color: $accent-color;
-}
+  &_web {
+    color: $accent-color;
+  }
 
-.logo-studio {
-  color: $primari-white-color;
+  &_studio {
+    color: $primari-white-color;
+  }
 }

@@ -59,9 +59,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color $transition;
   }
 }
 
@@ -70,9 +68,7 @@
   height: 20px;
 
   fill: $fill-icon-color;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill $transition;
 
   .set_link:hover &,
   .set_link:focus & {

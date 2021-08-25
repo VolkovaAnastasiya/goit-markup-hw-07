@@ -55,8 +55,7 @@
   &_link {
     display: block;
     color: $primari-text-color;
-    transition-property: box-shadow;
-    transition: $transition;
+    transition: box-shadow $transition;
   }
 }
 
