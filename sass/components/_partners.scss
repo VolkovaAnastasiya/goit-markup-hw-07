@@ -17,9 +17,8 @@
     border-radius: 4px;
     padding-top: 16px;
     padding-bottom: 16px;
-    transition-property: border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color $transition;
+
     &:focus,
     &:hover {
       border-color: $accent-color;

@@ -1,201 +1,54 @@
-.footer-link {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 /*  section footer */
-.footer-blok {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
 
   background-color: $hero-background-color;
-}
 
-.footer-blok > .container {
-  padding-top: 0;
-  padding-bottom: 0;
-}
+  & > .container {
+    align-items: baseline;
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
-.footer-logo {
-  display: block;
+  &_logo {
+    display: block;
 
-  margin-bottom: 20px;
-  margin-right: 0px;
-}
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
 
-.address {
-  color: $primari-white-color;
-  margin-bottom: 9px;
-}
-.address-nav:not(:last-child) {
-  margin-bottom: 9px;
-}
+  &_address {
+    color: $primari-white-color;
+    margin-right: 70px;
 
-.auth-nav-footer {
-  display: block;
-  color: $auth-nav-footer-color;
-  margin-bottom: 9px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
 
-.tel-nav-footer {
-  display: block;
-  color: $auth-nav-footer-color;
-}
+  &_nav,
+  &_address {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
 
-.auth-nav-footer:hover,
-:focus,
-.tel-nav-footer:hover,
-:focus {
-  color: $accent-color;
-}
+  &_nav {
+    display: block;
+    color: $footer-auth-color;
 
-.tel-nav-footer,
-.auth-nav-footer,
-.address {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-}
-.footer-adress {
-  margin-right: 70px;
-}
+    transition: color $transition;
 
-.footer.container {
-  align-items: baseline;
-  display: flex;
-}
-.link-title,
-.footer-label {
-  margin-bottom: 20px;
-  color: $primari-white-color;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-}
-.footer-box {
-  display: flex;
-}
-
-.footer-list {
-  margin-right: 10px;
-}
-.footer-list:last-child {
-  margin: 0px;
-}
-
-.footer-link {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  transition-property: background;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-link:hover,
-.footer-link:focus {
-  background-color: $accent-color;
-}
-.icon-footer {
-  width: 20px;
-  height: 20px;
-  fill: $primari-white-color;
-}
-input {
-  caret-color: $title-text-color;
-}
-input:focus {
-  color: $title-text-color;
-}
-
-.footer-mail {
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-}
-
-.mail-box {
-  display: flex;
-}
-
-.footer-input {
-  width: 358px;
-  padding: 15px 16px;
-  margin-right: 12px;
-  outline: none;
-
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-
-  caret-color: rgba(255, 255, 255, 0.6);
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background-color: $hero-background-color;
-}
-
-.footer-input:focus {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-submit {
-  display: inline-flex;
-  align-items: center;
-  text-align: center;
-  padding: 10px 29px;
-  height: 50px;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  color: $primari-white-color;
-  background-color: $accent-color;
-  border: none;
-
-  font-family: Roboto;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-
-  cursor: pointer;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-submit:focus,
-.footer-submit:hover {
-  background-color: $hero-button-focus-color;
-}
-.footer-submit .icon-footer {
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-}
-
-input {
-  caret-color: $title-text-color;
-}
-input:focus {
-  color: $title-text-color;
+    &:hover,
+    :focus {
+      color: $accent-color;
+    }
+  }
 }
