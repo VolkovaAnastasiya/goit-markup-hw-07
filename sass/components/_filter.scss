@@ -2,12 +2,11 @@
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
+}
+.filter__item {
+  border-radius: 4px;
 
-  &_item {
-    border-radius: 4px;
-  }
-
-  &_item:not(:last-child) {
+  &:not(:last-child) {
     margin-right: 8px;
   }
 }

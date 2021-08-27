@@ -1,19 +1,7 @@
-.list {
-  &_title {
-    margin-bottom: 20px;
-    color: $primari-white-color;
+.box__list {
+  display: flex;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-  }
-
-  &_item {
-    display: flex;
-  }
-
-  &-box {
+  .list__item {
     margin-right: 10px;
 
     &:last-child {
@@ -21,7 +9,7 @@
     }
   }
 
-  &-link {
+  .list__link {
     display: flex;
     width: 44px;
     height: 44px;
@@ -37,9 +25,18 @@
     }
   }
 
-  &-icon {
+  .list__icon {
     width: 20px;
     height: 20px;
     fill: $primari-white-color;
   }
+}
+.box__title {
+  margin-bottom: 20px;
+  color: $primari-white-color;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
 }

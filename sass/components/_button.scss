@@ -22,20 +22,3 @@
     box-shadow: $shadow;
   }
 }
-
-.hidden {
-  display: flex;
-  justify-content: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border: none;
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
-  border-radius: 4px;
-
-  &--icon {
-    width: 70px;
-    height: 70px;
-  }
-}

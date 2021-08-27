@@ -1,4 +1,5 @@
 @import "./utils/variables";
+// @import "./utils/fonts";
 @import "./base/normalize";
 @import "./components/body";
 @import "./components/button";
@@ -8,10 +9,10 @@
 @import "./components/nav";
 @import "./components/hero";
 @import "./components/feature";
-@import "./components/filter";
+
 @import "./components/work";
 @import "./components/team";
-@import "./components/title";
+@import "./components/filter";
 @import "./components/backdrop";
 @import "./components/form";
 @import "./components/policy";
@@ -21,7 +22,6 @@
 @import "./components/section";
 @import "./components/footer-list";
 @import "./components/projects";
-
+@import "./components/hidden";
 @import "./components/modal";
 @import "./components/footer";
-@import "./utils/fonts";
